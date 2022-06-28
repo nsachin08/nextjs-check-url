@@ -16,7 +16,7 @@ export default function Home({ url }) {
 }
 
 export async function getServerSideProps(context) {
-  const url = context.req.url;
+  const url = context.req.headers.host;
 
   return {
     props: {
